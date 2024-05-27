@@ -168,7 +168,7 @@ export default {
       }
       this.$confirm('确认批量删除?', '确认', {type: "warning"}).then(response =>{
         this.$request.delete('/user/delete/batch', {
-          data: this.ids
+              data: this.ids
             }
         ).then(res =>{
 
@@ -213,12 +213,12 @@ export default {
         this.pageNum = pageNum
       }
       this.$request.get('/user/selectByPage',{
-      params: {
-        pageNum: this.pageNum,
-        pageSize: this.pageSize,
-        name: this.name,
-        phone: this.phone
-      }
+        params: {
+          pageNum: this.pageNum,
+          pageSize: this.pageSize,
+          name: this.name,
+          phone: this.phone
+        }
       }).then(res =>{
         this.tableData = res.data.records
         this.total = res.data.total
@@ -226,7 +226,7 @@ export default {
 
     },
     handleCurrentChange(pageNum) {
-       this.pageNum = pageNum
+      this.pageNum = pageNum
       this.load()
     },
     handleAvatarSuccess(response, file, fileList) {

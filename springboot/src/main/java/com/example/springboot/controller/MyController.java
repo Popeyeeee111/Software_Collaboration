@@ -105,14 +105,14 @@ public class MyController {
 
     //单个删除
     @DeleteMapping("/delete/{id}")
-    public Result delete(@PathVariable Integer id) {
+    public Result delete1(@PathVariable Integer id) {
   
         return Result.success();
     }
 
     //批量删除
     @DeleteMapping("/delete/batch")
-    public Result batchdelete(@RequestBody List<Integer> ids) {
+    public Result batchdelete1(@RequestBody List<Integer> ids) {
 
         return Result.success();
     }
